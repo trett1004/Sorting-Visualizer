@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Appbar from "./components/AppBar";
-import { Insertion, Quick, Selection } from "./components/Helper/constants";
+import {
+  Insertion,
+  Quick,
+  Selection,
+  Merge,
+} from "./components/Helper/constants";
 import { generateArray } from "./components/Helper/helper";
 import { InsertionSort } from "./components/SortingAlgorithms/InsertionSort";
 import { QuickSort } from "./components/SortingAlgorithms/QuickSort";
 import { SelectionSort } from "./components/SortingAlgorithms/SelectionSort";
+import { MergeSort } from "./components/SortingAlgorithms/MergeSort";
 import SortingBars from "./components/SortingBars";
 
 function App() {
@@ -30,6 +36,9 @@ function App() {
         break;
       case Quick:
         QuickSort(array, 0, array.length - 1, setArray);
+        break;
+      case Merge:
+        MergeSort(array, setArray);
         break;
       default:
         console.log("Not algo");

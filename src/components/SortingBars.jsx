@@ -48,6 +48,8 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "center",
+    height: "600px",
+    overflow: "hidden",
   },
   hr: {
     margin: "0px",
